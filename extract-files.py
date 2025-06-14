@@ -54,6 +54,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/mt6895/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
+    ('vendor/lib64/libnvram.so','vendor/lib64/libsysenv.so'): blob_fixup()
+    	.add_needed('libbase_shim.so')
 }  # fmt: skip
 
 module = ExtractUtilsModule(
