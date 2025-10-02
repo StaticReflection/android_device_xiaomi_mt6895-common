@@ -70,14 +70,14 @@ endif
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/yaap/config/device_framework_matrix.xml
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6895
 TARGET_KERNEL_CLANG_VERSION := r416183b
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
+# TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_CONFIG := \
 	gki_defconfig \
 	vendor/xiaomi_mt6895.config \
